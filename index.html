@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas Segitiga</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjtEb5eWkA35PvSmleC07yM1ccuF9cXLvzLQ&s'); 
+            background-size: cover;
+        }
+        table {
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        td {
+            padding: 5px;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2" style="text-align: center;"><h2>Hitung Luas Segitiga</h2></td>
+        </tr>
+        <tr>
+            <td>Alas (cm):</td>
+            <td><input type="number" id="alas"></td>
+        </tr>
+        <tr>
+            <td>Tinggi (cm):</td>
+            <td><input type="number" id="tinggi"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button onclick="hitungLuas()">Hitung</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <p id="hasil"></p>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function hitungLuas() {
+            var alas = document.getElementById("alas").value;
+            var tinggi = document.getElementById("tinggi").value;
+            var luas = 0.5*alas*tinggi;
+            document.getElementById("hasil").innerText = "Luas segitiga: " + luas + " cm²";
+        }
+    </script>
+</body>
+</html>
